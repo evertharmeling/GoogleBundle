@@ -8,7 +8,7 @@
         <parameter key="google.analytics.whitelist" type="collection" />
         <parameter key="google.analytics.js_source_https">https://ssl</parameter>
         <parameter key="google.analytics.js_source_http">http://www</parameter>
-        <parameter key="google.analytics.js_source_endpoint">.google-analytics.com/ga.js</parameter>
+        <parameter key="google.analytics.js_source_endpoint">analytics.js</parameter>
     </parameters>
 
     <services>

@@ -39,7 +39,7 @@ class AnalyticsHelper extends Helper
     public function getTrackerName($trackerKey)
     {
         if ($this->analytics->getIncludeNamePrefix($trackerKey)) {
-            return $this->analytics->getTrackerName($trackerKey).'.';
+            return $this->analytics->getTrackerName($trackerKey);
         }
         return "";
     }
