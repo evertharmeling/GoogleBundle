@@ -34,8 +34,6 @@
     {% for key, tracker in google_analytics.trackers %}
         {% set trackerName = google_analytics.trackerName(key) %}
 
-        ga('{{ trackerName }}.require', 'displayfeatures');
-
         var settings = {'name': '{{ trackerName }}'};
 
         {% set siteSpeedSampleRate = google_analytics.getSiteSpeedSampleRate(key) %}
@@ -52,6 +50,7 @@
         {% endif %}
 
         ga('create', '{{ tracker.accountId }}', settings);
+        ga('{{ trackerName }}.require', 'displayfeatures');
 
         {% if google_analytics.hasCustomPageView %}
             {% set customPageView = google_analytics.getCustomPageView|raw %}
