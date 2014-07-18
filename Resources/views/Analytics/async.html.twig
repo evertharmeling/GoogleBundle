@@ -33,6 +33,9 @@
     {% spaceless %}
     {% for key, tracker in google_analytics.trackers %}
         {% set trackerName = google_analytics.trackerName(key) %}
+
+        ga('{{ trackerName }}.require', 'displayfeatures');
+
         var settings = {'name': '{{ trackerName }}'};
 
         {% set siteSpeedSampleRate = google_analytics.getSiteSpeedSampleRate(key) %}
